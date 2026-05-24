@@ -12,6 +12,3 @@ jobs:
   steps:
    - name: Checkout Repository
      uses: actions/Checkout@v3
-      sed -i '/<\/body>/i <p>Updated by Team Leader on '"$(date)"'</p>' index.html
-      sed -i '/<\/body>/i <p>Updated by tegan1 on '"$(date)"'</p>' index.html
-      sed -i '/<\/body>/i <p>Updated by tegan2 on '"$(date)"'</p>' index.html
