@@ -15,6 +15,8 @@ jobs:
    - name: Update index.html if github.actor == 'TeganScott-uts'
      run: |
       sed -i '/<\/body>/i <p>Updated by Team Leader on '"$(date)"'</p>' index.html
+      sed -i '/<\/body>/i <p>Updated by Tegan1 on '"$(date)"'</p>' index.html
+      sed -i '/<\/body>/i <p>Updated by Tegan2 on '"$(date)"'</p>' index.html
 
    
    - name: Commit and Push Changes
