@@ -4,8 +4,7 @@ on:
  push:
   branches:
    - main
-
-
+   
 jobs:
  update_html_and_readme:
   runs-on: ubuntu-latest
@@ -19,11 +18,9 @@ jobs:
       sed -i '/<\/body>/i <p>Updated by Tegan1 on '"$(date)"'</p>' index.html
       sed -i '/<\/body>/i <p>Updated by Tegan2 on '"$(date)"'</p>' index.html
      
-     
    - name: Update README.md
      run: |
       echo "### Updated by ${{ github.actor }} on $(date '+%Y-%m-%d %H:%M:%S') [Commit: $(git rev-parse --short HEAD)]" >> README.md
-
 
    - name: Commit and Push Changes
      run: |
